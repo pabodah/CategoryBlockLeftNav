@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright (c) On Tap Networks Limited.
+ */
+?>
+<?php
+/** @var $block \OnTap\CategoryBlockLeftNav\Block\Widget\SubCategories */
+?>
+
+<?php if ($block->getSubCategories()): ?>
+    <div class="category-block container hidden lg:block border-t border-b border-color-grey1 py-5 mb-5">
+        <div class="relative flex flex-row">
+            <div>
+                <div class="empty text-title block py-2.5">
+                    <a href="<?= $block->escapeHtml($block->getCategoryUrl()) ?>">
+                        <?= $block->escapeHtml($block->getCategoryName()) ?>
+                    </a>
+                </div>
+                <ul>
+                    <?= $block->getSubCategoryByCategory(); ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright (c) On Tap Networks Limited.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+
+    <widget id="category_subcategories_widget" class="OnTap\CategoryBlockLeftNav\Block\Widget\SubCategories">
+        <label>Subcategories Widget</label>
+        <description>Displays subcategories of the current category</description>
+        <parameters>
+            <parameter name="template" xsi:type="select" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="sub-category-current-category"
+                            value="widget/sub_category_left_nav.phtml" selected="true">
+                        <label translate="true">Dynamic Sub-category Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
